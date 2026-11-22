@@ -52,19 +52,15 @@
 <span style="font-size:14px;color:#4a5f70">Access code: BeachPreview</span>
 </div>
 </div>
-<div style="display:flex;flex-direction:column;gap:16px">
-<div style="border-radius:12px;background:#e6f1f8;padding:20px;display:flex;flex-direction:column;gap:8px" aria-hidden="true">
-<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px">
-<div style="height:64px;border-radius:6px;background:#2f8f6b"></div>
-<div style="height:64px;border-radius:6px;background:#7cc49a"></div>
-<div style="height:64px;border-radius:6px;background:#2f6fd0"></div>
-<div style="height:64px;border-radius:6px;background:#bfe3cc"></div>
-</div>
-<div style="height:28px;border-radius:6px;background:#e8d6a8"></div>
-<div style="height:36px;border-radius:6px;background:#5aa9d6"></div>
-</div>
-<p style="margin:0;font-size:13px;color:#4a5f70">Beach sectors A to D, colored by how many volunteers have booked each one.</p>
+<div class="media-span" style="display:flex;flex-direction:column;gap:16px">
+<a class="shot" href="images/beach-sector-booking.jpg" data-caption="The booking page: volunteers pick a sector on the map, then a time slot. The grid shows how full each slot is. Sample data from the public preview."><img src="images/beach-sector-booking.jpg" width="1400" height="1101" loading="lazy" alt="Smart Beach Cleanups booking page: a satellite map of Juno Beach outlined into cleanup sectors, a form to reserve a sector and time slot, and a weekly grid showing how many volunteers have booked each sector and slot."></a>
+<p class="caption">The booking page: pick a sector on the map, then a time slot. The grid shows how full each slot is. Sample data from the public preview. Click any image to enlarge.</p>
+<figure class="fig"><a class="shot" href="images/beach-photo-upload.png" data-caption="The AI photo check at work: a real cleanup photo is added to the gallery, and a chart uploaded by mistake is rejected with the model's reason."><img src="images/beach-photo-upload.png" width="1400" height="719" loading="lazy" alt="Upload Cleanup Photos page after an upload: one cleanup photo was added to the gallery, and a bar chart image was rejected with the explanation that it is a chart, not a beach cleanup photo."></a><figcaption class="caption">The AI photo check: a cleanup photo is accepted, and an unrelated image is rejected with the model's reason.</figcaption></figure>
 <div><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">PostgreSQL</span><span class="tag">AWS (EC2, S3, load balancer)</span><span class="tag">nginx</span><span class="tag">Google Maps API</span><span class="tag">Anthropic API</span><span class="tag">JavaScript</span></div>
+</div>
+<div class="under">
+<figure class="fig"><a class="shot" href="images/beach-leaderboard.png" data-caption="Volunteer leaderboard ranking volunteers by pounds of trash collected and cleanups joined, for the last 30 days and this year. Sample names."><img src="images/beach-leaderboard.png" width="1200" height="559" loading="lazy" alt="Cleanup leaderboard ranking sample volunteers by pounds of trash collected and number of cleanups, for the last 30 days and this year."></a><figcaption class="caption">Volunteer leaderboard by pounds collected and cleanups joined (sample names).</figcaption></figure>
+<figure class="fig"><a class="shot" href="images/beach-gallery.jpg" data-caption="Gallery of approved cleanup photos, shown here with the preview's sample photos."><img src="images/beach-gallery.jpg" width="1400" height="793" loading="lazy" alt="Cleanup Gallery page showing a grid of beach cleanup photos: volunteers collecting trash, bags of collected debris, and cleaned beaches."></a><figcaption class="caption">Gallery of approved cleanup photos (the preview's sample photos).</figcaption></figure>
 </div>
 </article>
 
@@ -79,15 +75,19 @@
 <li>Sign-in with a password plus a Google Authenticator code</li>
 <li>About 165 automated tests and nightly cloud backups</li>
 </ul>
-<p style="margin:0;font-size:15px;color:#4a5f70">No public demo, because it holds real customer data.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+<a class="btn" href="https://flcode17.github.io/lead-tracker-demo/" style="background:#0a2540;color:#ffffff">Try the demo</a>
+<span style="font-size:14px;color:#4a5f70">The demo uses a fictional company and made-up leads.</span>
 </div>
-<div style="display:flex;flex-direction:column;gap:16px">
-<div style="border-radius:12px;background:#f3f5f7;padding:16px;display:flex;flex-direction:column;gap:8px" aria-hidden="true">
-<div style="display:flex;gap:8px;align-items:center;background:#ffffff;border-radius:8px;padding:10px 12px"><span style="width:10px;height:10px;border-radius:50%;background:#2f6fd0"></span><span style="flex:1;height:10px;border-radius:4px;background:#d5dde5"></span><span style="font-size:12px;color:#22384a">new</span></div>
-<div style="display:flex;gap:8px;align-items:center;background:#ffffff;border-radius:8px;padding:10px 12px"><span style="width:10px;height:10px;border-radius:50%;background:#e0a100"></span><span style="flex:1;height:10px;border-radius:4px;background:#d5dde5"></span><span style="font-size:12px;color:#22384a">talking</span></div>
-<div style="display:flex;gap:8px;align-items:center;background:#ffffff;border-radius:8px;padding:10px 12px"><span style="width:10px;height:10px;border-radius:50%;background:#2f8f6b"></span><span style="flex:1;height:10px;border-radius:4px;background:#d5dde5"></span><span style="font-size:12px;color:#22384a">bought</span></div>
 </div>
+<div class="media-span" style="display:flex;flex-direction:column;gap:16px">
+<figure class="fig"><a class="shot" href="images/lead-board.jpg" data-caption="The lead board: every inquiry sorted by status, with filters for source and warehouse. Fictional demo data."><img src="images/lead-board.jpg" width="1600" height="857" loading="lazy" alt="Lead tracker board with columns for New, Talking, Bought and Dead leads. Each card shows a fictional customer, the product they asked about, the source, the warehouse and how long ago the lead came in."></a><figcaption class="caption">The lead board: every inquiry sorted by status, with filters for source and warehouse. Fictional demo data. Click any image to enlarge.</figcaption></figure>
+<figure class="fig"><a class="shot" href="images/lead-edit.jpg" data-caption="Editing a lead: the form shows who added it and who last changed it, with a link to its full history."><img src="images/lead-edit.jpg" width="1600" height="926" loading="lazy" alt="Edit lead form for a fictional customer, showing who added and last edited the lead, contact details, source, status, warehouse, notes, a pickup date and time, and an Archive lead button."></a><figcaption class="caption">Editing a lead: the form shows who added it and who last changed it, with a link to its full history.</figcaption></figure>
 <div><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">SQLAlchemy</span><span class="tag">SQLite</span><span class="tag">pytest</span><span class="tag">Railway</span><span class="tag">Cloudflare R2</span></div>
+</div>
+<div class="under">
+<figure class="fig"><a class="shot" href="images/lead-calendar.jpg" data-caption="Pickup and delivery calendar built from the leads."><img src="images/lead-calendar.jpg" width="1400" height="912" loading="lazy" alt="Monthly pickup and delivery calendar with fictional customer pickups shown on their dates."></a><figcaption class="caption">Pickup and delivery calendar built from the leads.</figcaption></figure>
+<figure class="fig"><a class="shot" href="images/lead-activity.jpg" data-caption="Activity log: every change, who made it and when."><img src="images/lead-activity.jpg" width="1400" height="1078" loading="lazy" alt="Activity log listing recent changes with the time, the staff member, and what changed, such as a status moving from new to talking or a note being edited."></a><figcaption class="caption">Activity log: every change, who made it and when.</figcaption></figure>
 </div>
 </article>
 
@@ -107,16 +107,14 @@
 <span style="font-size:14px;color:#4a5f70">The demo uses realistic fake data.</span>
 </div>
 </div>
-<div style="display:flex;flex-direction:column;gap:16px">
-<div style="border-radius:12px;background:#f3f5f7;padding:20px;display:flex;align-items:flex-end;gap:10px;height:180px" aria-hidden="true">
-<div style="flex:1;height:35%;border-radius:4px 4px 0 0;background:#9cc3ea"></div>
-<div style="flex:1;height:50%;border-radius:4px 4px 0 0;background:#9cc3ea"></div>
-<div style="flex:1;height:44%;border-radius:4px 4px 0 0;background:#9cc3ea"></div>
-<div style="flex:1;height:68%;border-radius:4px 4px 0 0;background:#9cc3ea"></div>
-<div style="flex:1;height:61%;border-radius:4px 4px 0 0;background:#9cc3ea"></div>
-<div style="flex:1;height:88%;border-radius:4px 4px 0 0;background:#0b5cc4"></div>
-</div>
+<div class="media-span" style="display:flex;flex-direction:column;gap:16px">
+<figure class="fig"><a class="shot" href="images/dash-overview.jpg" data-caption="The overview: a timeframe filter, headline numbers and a map of sales by city. Made-up data for a fictional company."><img src="images/dash-overview.jpg" width="1600" height="976" loading="lazy" alt="Business metrics dashboard for the fictional Demo Equipment Co.: a timeframe filter, stat cards for units sold, revenue, best channel and top model, and a map of sales by city colored by serving warehouse."></a><figcaption class="caption">The overview: a timeframe filter, headline numbers and a map of sales by city. Made-up data for a fictional company. Click any image to enlarge.</figcaption></figure>
+<figure class="fig"><a class="shot" href="images/dash-models-channels.jpg" data-caption="Units sold by model and where new customers come from."><img src="images/dash-models-channels.jpg" width="1600" height="416" loading="lazy" alt="Bar chart of units sold by model next to a donut chart of where new customers came from, by channel."></a><figcaption class="caption">Units sold by model and where new customers come from.</figcaption></figure>
 <div><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">pandas</span><span class="tag">SQL</span><span class="tag">QuickBooks API</span><span class="tag">OAuth 2.0</span></div>
+</div>
+<div class="under">
+<figure class="fig"><a class="shot" href="images/dash-ad-spend.jpg" data-caption="Ad spend vs. return: cost per new customer by paid channel."><img src="images/dash-ad-spend.jpg" width="1000" height="522" loading="lazy" alt="Bar chart of cost per acquired customer for three paid channels: marketplace, Google ads and social ads."></a><figcaption class="caption">Ad spend vs. return: cost per new customer by paid channel.</figcaption></figure>
+<figure class="fig"><a class="shot" href="images/dash-sales-trend.jpg" data-caption="Sales trend: units sold per month."><img src="images/dash-sales-trend.jpg" width="1000" height="522" loading="lazy" alt="Line chart of units sold per month over the past year."></a><figcaption class="caption">Sales trend: units sold per month.</figcaption></figure>
 </div>
 </article>
 
@@ -136,18 +134,19 @@
 <p style="margin:0;font-size:15px;color:#4a5f70">My role: [WHAT YOU PERSONALLY BUILT OR ANALYZED]</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:16px">
-<div style="border-radius:12px;background:#f3f5f7;padding:20px;display:flex;flex-direction:column;gap:12px">
-<p style="margin:0;font-size:14px;font-weight:600;color:#22384a">Construction share as a predictor of recovery</p>
-<div style="display:flex;flex-direction:column;gap:4px">
-<span style="font-size:13px;color:#4a5f70">2008 crisis: significant negative effect</span>
-<div style="height:14px;width:85%;border-radius:4px;background:#c2410c"></div>
-</div>
-<div style="display:flex;flex-direction:column;gap:4px">
-<span style="font-size:13px;color:#4a5f70">COVID-19: no measurable effect</span>
-<div style="height:14px;width:2%;min-width:4px;border-radius:4px;background:#8a9aa8"></div>
-</div>
-</div>
+<a class="shot" href="images/wharton-migration-scatter.png" data-caption="County recovery against net migration for each crisis, with OLS trend lines and 95% confidence bands. Counties gaining residents tended to recover more strongly, and the association is much stronger after COVID."><img src="images/wharton-migration-scatter.png" width="1600" height="1067" loading="lazy" alt="Two scatterplots of county recovery against net migration per 1,000 residents, one for the Great Recession and one for COVID-19, each with an OLS trend line and confidence band. The COVID-19 line is much steeper."></a>
+<p class="caption">Recovery against net migration, with OLS trend lines and 95% confidence bands. The association is much stronger after COVID. Click any chart to enlarge.</p>
+<figure class="fig"><a class="shot" href="images/wharton-crosscrisis.png" data-caption="Cross-crisis test: a random forest trained on one crisis predicts county recovery in the other. Spearman rank correlations are 0.34 and 0.25, a little over half of each crisis's own ranking ability."><img src="images/wharton-crosscrisis.png" width="1600" height="954" loading="lazy" alt="Two scatterplots of actual versus predicted county recovery when a random forest trained on one crisis predicts the other, with a dashed 45 degree line and Spearman rho of 0.336 and 0.246."></a><figcaption class="caption">Cross-crisis test: a random forest trained on one crisis ranks counties in the other with Spearman correlations of 0.34 and 0.25.</figcaption></figure>
 <div><span class="tag">R</span><span class="tag">tidyverse</span><span class="tag">ggplot2</span><span class="tag">glmnet (LASSO)</span><span class="tag">randomForest</span><span class="tag">Git</span><span class="tag">Federal data (BLS, Census, IRS, BEA, USDA)</span></div>
+</div>
+<div class="more">
+<figure class="fig wide"><a class="shot" href="images/wharton-county-maps.jpg" data-caption="Recovery ratio for every U.S. county after each crisis: employment two to three years after the trough divided by the pre-crisis peak. Blue counties stayed below their peak; red counties passed it."><img src="images/wharton-county-maps.jpg" width="1600" height="698" loading="lazy" alt="Two U.S. county maps colored by recovery ratio, after the 2008 recession and after COVID-19. The 2008 map has many blue counties below their pre-crisis peak; the COVID-19 map is mostly red."></a><figcaption class="caption">Recovery ratio for every U.S. county after each crisis: employment two to three years after the trough divided by the pre-crisis peak. Blue counties stayed below their peak; red counties passed it.</figcaption></figure>
+<figure class="fig"><a class="shot" href="images/wharton-scatter-matrix.png" data-caption="Scatterplot matrices of recovery, poverty, income, population density and rurality for each crisis, with pairwise correlations."><img src="images/wharton-scatter-matrix.png" width="1600" height="727" loading="lazy" alt="Two scatterplot matrices, for the 2008 recession and COVID-19, showing pairwise scatterplots, density curves and correlation coefficients for recovery ratio, poverty rate, log median income, log population density and rurality."></a><figcaption class="caption">Scatterplot matrices of recovery, poverty, income, population density and rurality for each crisis, with pairwise correlations.</figcaption></figure>
+<figure class="fig"><a class="shot" href="images/wharton-lasso-path.png" data-caption="LASSO coefficient paths for each crisis: how each predictor's estimated effect grows as the penalty is relaxed. Dotted lines mark lambda.min and lambda.1se."><img src="images/wharton-lasso-path.png" width="1600" height="949" loading="lazy" alt="LASSO coefficient path plots for 2008 and COVID showing self-employment, migration rate, unemployment rate and working-age share entering the model as the penalty decreases."></a><figcaption class="caption">LASSO coefficient paths for each crisis: how each predictor's estimated effect grows as the penalty is relaxed. Dotted lines mark lambda.min and lambda.1se.</figcaption></figure>
+<figure class="fig"><a class="shot" href="images/wharton-method-agreement.png" data-caption="OLS, standard LASSO and relaxed LASSO estimates side by side for each predictor. The three methods give closely matching results."><img src="images/wharton-method-agreement.png" width="1600" height="947" loading="lazy" alt="Dot plot comparing OLS with confidence intervals, standard LASSO and relaxed LASSO coefficients for four predictors, for 2008 and COVID."></a><figcaption class="caption">OLS, standard LASSO and relaxed LASSO estimates side by side for each predictor. The three methods give closely matching results.</figcaption></figure>
+<figure class="fig"><a class="shot" href="images/wharton-rf-importance.png" data-caption="Random forest permutation importance: how much prediction error rises when each predictor is shuffled. Importance shows predictive reliance, not causation."><img src="images/wharton-rf-importance.png" width="1600" height="996" loading="lazy" alt="Horizontal bar charts of random forest permutation importance for 2008 and COVID, with the studied predictors highlighted in blue."></a><figcaption class="caption">Random forest permutation importance: how much prediction error rises when each predictor is shuffled. Importance shows predictive reliance, not causation.</figcaption></figure>
+<figure class="fig"><a class="shot" href="images/wharton-industry-coefficients.png" data-caption="Industry mix and recovery, with 95% confidence intervals. Construction share is associated with weaker recovery after 2008 and has no association during COVID."><img src="images/wharton-industry-coefficients.png" width="1600" height="957" loading="lazy" alt="Coefficient plot of industry employment shares and county recovery, 2008 and COVID side by side, with 95% confidence intervals. Construction is significantly negative in 2008 and sits at zero for COVID."></a><figcaption class="caption">Industry mix and recovery, with 95% confidence intervals. Construction share is associated with weaker recovery after 2008 and has no association during COVID.</figcaption></figure>
+<figure class="fig"><a class="shot" href="images/wharton-predictability.png" data-caption="How much of county recovery our random forest could explain (out-of-bag R squared): 14.5% for 2008, 34.7% for COVID and 31.0% for a non-crisis period."><img src="images/wharton-predictability.png" width="878" height="1139" loading="lazy" alt="Bar chart of random forest out-of-bag R-squared: 14.5% for the 2008 crisis, 34.7% for COVID-19, and 31.0% for a non-crisis placebo period from 2014 to 2017."></a><figcaption class="caption">How much of county recovery our random forest could explain (out-of-bag R squared): 14.5% for 2008, 34.7% for COVID and 31.0% for a non-crisis period.</figcaption></figure>
 </div>
 </article>
 </section>
@@ -184,7 +183,7 @@
 <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:36px;letter-spacing:-0.02em">Get in touch</h2>
 <p style="margin:0;font-size:17px;color:#22384a">I&#39;m looking for a summer 2027 research or software role, especially in machine learning or healthcare.</p>
 <div style="display:flex;flex-wrap:wrap;gap:24px;font-size:17px">
-<span>Email: [YOUR EMAIL]</span>
+<span>Email: andrew.sg5312@gmail.com</span>
 <a href="https://github.com/flcode17">github.com/flcode17</a>
 <a href="https://www.linkedin.com/in/andrew-sg5312/">linkedin.com/in/andrew-sg5312</a>
 </div>
@@ -194,5 +193,11 @@
 
 <footer class="wrap" style="padding-top:24px;padding-bottom:24px;font-size:14px;color:#4a5f70">Andrew Sergeyev, Palm Beach Gardens, Florida</footer>
 </div>
+<dialog id="lightbox" class="lightbox" aria-label="Enlarged image">
+<button type="button" class="lightbox-close" aria-label="Close">×</button>
+<img alt="">
+<p class="lightbox-caption"></p>
+</dialog>
+<script src="lightbox.js"></script>
 </body>
 </html>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andrew Sergeyev Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div style="width:100%;min-width:0">
+
+<header style="background:#0a2540;color:#ffffff">
+<nav class="wrap" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-top:20px;padding-bottom:20px">
+<a href="#top" style="color:#ffffff;text-decoration:none;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px">Andrew Sergeyev</a>
+<div style="display:flex;flex-wrap:wrap;gap:20px;font-size:15px">
+<a href="#projects" style="color:#cfe6ff">Projects</a>
+<a href="#volunteering" style="color:#cfe6ff">Volunteering</a>
+<a href="#skills" style="color:#cfe6ff">Skills</a>
+<a href="#contact" style="color:#cfe6ff">Contact</a>
+</div>
+</nav>
+<div id="top" class="wrap" style="padding-top:56px;padding-bottom:72px;display:flex;flex-direction:column;gap:20px">
+<h1 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(40px,6vw,64px);line-height:1.05;letter-spacing:-0.02em">I build software and data tools for real organizations.</h1>
+<p style="margin:0;max-width:640px;font-size:18px;line-height:1.6;color:#dbe7f3">I&#39;m a junior at The Benjamin School in Palm Beach Gardens, Florida, planning to major in computer science. I&#39;ve built a volunteer booking system for a sea turtle nonprofit, internal tools for a small business, and statistical models of economic recovery at Wharton.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;padding-top:8px">
+<a class="btn" href="#projects" style="background:#8fd3ff;color:#0a2540">See my projects</a>
+<a class="btn" href="https://github.com/flcode17" style="border:1px solid #5b7a96;color:#ffffff">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/andrew-sg5312/" style="border:1px solid #5b7a96;color:#ffffff">LinkedIn</a>
+</div>
+</div>
+</header>
+
+<main>
+<section id="projects" class="wrap" style="padding-top:64px;padding-bottom:24px">
+<h2 style="margin:0 0 8px;font-family:'Space Grotesk',sans-serif;font-size:36px;letter-spacing:-0.02em">Projects</h2>
+<p style="margin:0 0 24px;color:#4a5f70;font-size:17px">Three apps I designed and built on my own, and one team research project.</p>
+
+<article class="proj">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="margin:0;font-size:14px;font-weight:600;color:#0b5cc4">Built for Loggerhead Marinelife Center, Juno Beach</p>
+<h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:28px;line-height:1.15">Smart Beach Cleanups</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">Volunteers at beach cleanups tend to bunch up near the entrance, so most of the beach never gets cleaned. I built a web app where volunteers pick a beach sector and time slot on a map before they arrive, so cleanups cover the whole shoreline. Volunteers can upload photos of what they collected, and an AI model automatically rejects photos that aren&#39;t from a cleanup.</p>
+<ul style="margin:0;padding-left:20px;font-size:16px;line-height:1.6">
+<li>Runs on two AWS servers behind a load balancer, so the site stays up if one fails</li>
+<li>Nightly database backups, health monitoring, and email alerts</li>
+<li>Each organization&#39;s data is kept separate, so the same app can serve other groups</li>
+</ul>
+<p style="margin:0;font-size:15px;color:#4a5f70">Status: in development with Loggerhead, and being shown to other Florida beach cleanup groups.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+<a class="btn" href="https://smartbeachcleanups.com/preview.html" style="background:#0a2540;color:#ffffff">Try the demo</a>
+<span style="font-size:14px;color:#4a5f70">Access code: BeachPreview</span>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="border-radius:12px;background:#e6f1f8;padding:20px;display:flex;flex-direction:column;gap:8px" aria-hidden="true">
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px">
+<div style="height:64px;border-radius:6px;background:#2f8f6b"></div>
+<div style="height:64px;border-radius:6px;background:#7cc49a"></div>
+<div style="height:64px;border-radius:6px;background:#2f6fd0"></div>
+<div style="height:64px;border-radius:6px;background:#bfe3cc"></div>
+</div>
+<div style="height:28px;border-radius:6px;background:#e8d6a8"></div>
+<div style="height:36px;border-radius:6px;background:#5aa9d6"></div>
+</div>
+<p style="margin:0;font-size:13px;color:#4a5f70">Beach sectors A to D, colored by how many volunteers have booked each one.</p>
+<div><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">PostgreSQL</span><span class="tag">AWS (EC2, S3, load balancer)</span><span class="tag">nginx</span><span class="tag">Google Maps API</span><span class="tag">Anthropic API</span><span class="tag">JavaScript</span></div>
+</div>
+</article>
+
+<article class="proj">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="margin:0;font-size:14px;font-weight:600;color:#0b5cc4">In use by a small equipment sales business</p>
+<h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:28px;line-height:1.15">Lead Inquiry Tracker</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">The sales team was tracking customer inquiries from email, phone, Facebook, the website and walk-ins in scattered places. I built an internal web app where they log every lead, filter by status and source, and see upcoming pickups on a calendar.</p>
+<ul style="margin:0;padding-left:20px;font-size:16px;line-height:1.6">
+<li>Records every change with who made it and when, so nothing is lost</li>
+<li>Leads are archived instead of deleted; only the owner can erase them</li>
+<li>Sign-in with a password plus a Google Authenticator code</li>
+<li>About 165 automated tests and nightly cloud backups</li>
+</ul>
+<p style="margin:0;font-size:15px;color:#4a5f70">No public demo, because it holds real customer data.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="border-radius:12px;background:#f3f5f7;padding:16px;display:flex;flex-direction:column;gap:8px" aria-hidden="true">
+<div style="display:flex;gap:8px;align-items:center;background:#ffffff;border-radius:8px;padding:10px 12px"><span style="width:10px;height:10px;border-radius:50%;background:#2f6fd0"></span><span style="flex:1;height:10px;border-radius:4px;background:#d5dde5"></span><span style="font-size:12px;color:#22384a">new</span></div>
+<div style="display:flex;gap:8px;align-items:center;background:#ffffff;border-radius:8px;padding:10px 12px"><span style="width:10px;height:10px;border-radius:50%;background:#e0a100"></span><span style="flex:1;height:10px;border-radius:4px;background:#d5dde5"></span><span style="font-size:12px;color:#22384a">talking</span></div>
+<div style="display:flex;gap:8px;align-items:center;background:#ffffff;border-radius:8px;padding:10px 12px"><span style="width:10px;height:10px;border-radius:50%;background:#2f8f6b"></span><span style="flex:1;height:10px;border-radius:4px;background:#d5dde5"></span><span style="font-size:12px;color:#22384a">bought</span></div>
+</div>
+<div><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">SQLAlchemy</span><span class="tag">SQLite</span><span class="tag">pytest</span><span class="tag">Railway</span><span class="tag">Cloudflare R2</span></div>
+</div>
+</article>
+
+<article class="proj">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="margin:0;font-size:14px;font-weight:600;color:#0b5cc4">Built for the same equipment business</p>
+<h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:28px;line-height:1.15">Business Metrics Dashboard</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">A dashboard that pulls the business&#39;s sales data from QuickBooks once a day and shows revenue, units sold, top models and trends for any time period.</p>
+<ul style="margin:0;padding-left:20px;font-size:16px;line-height:1.6">
+<li>Connects to QuickBooks through OAuth 2.0, so I never see the owner&#39;s password</li>
+<li>Cleans each record: skips voided sales, subtracts returns, removes deleted records</li>
+<li>Tested against fake QuickBooks data where the correct totals were known</li>
+<li>Encrypted database and two-factor sign-in</li>
+</ul>
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+<a class="btn" href="https://sales-metrics-demo.streamlit.app/" style="background:#0a2540;color:#ffffff">Try the demo</a>
+<span style="font-size:14px;color:#4a5f70">The demo uses realistic fake data.</span>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="border-radius:12px;background:#f3f5f7;padding:20px;display:flex;align-items:flex-end;gap:10px;height:180px" aria-hidden="true">
+<div style="flex:1;height:35%;border-radius:4px 4px 0 0;background:#9cc3ea"></div>
+<div style="flex:1;height:50%;border-radius:4px 4px 0 0;background:#9cc3ea"></div>
+<div style="flex:1;height:44%;border-radius:4px 4px 0 0;background:#9cc3ea"></div>
+<div style="flex:1;height:68%;border-radius:4px 4px 0 0;background:#9cc3ea"></div>
+<div style="flex:1;height:61%;border-radius:4px 4px 0 0;background:#9cc3ea"></div>
+<div style="flex:1;height:88%;border-radius:4px 4px 0 0;background:#0b5cc4"></div>
+</div>
+<div><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">pandas</span><span class="tag">SQL</span><span class="tag">QuickBooks API</span><span class="tag">OAuth 2.0</span></div>
+</div>
+</article>
+
+<article class="proj">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="margin:0;font-size:14px;font-weight:600;color:#0b5cc4">Wharton Global Youth Data Science Academy, Summer 2026</p>
+<h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:28px;line-height:1.15">Bouncing Back: Predicting an Economy&#39;s Recovery</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">With four teammates, I tested whether the same county traits predict economic recovery from both the 2008 financial crisis and COVID-19. We combined data on about 3,000 U.S. counties from seven federal sources, including the Bureau of Labor Statistics, the Census Bureau, the IRS and the Bureau of Economic Analysis. We compared counties at similar income levels, so the results weren&#39;t just showing that wealthy places recover.</p>
+<ul style="margin:0;padding-left:20px;font-size:16px;line-height:1.6">
+<li>Compared multiple linear regression, LASSO, relaxed LASSO and random forest models in R, and checked that they picked the same predictors</li>
+<li>Age mix and self-employment predicted recovery in both crises; construction jobs hurt recovery in 2008 but had no effect during COVID</li>
+<li>2008 was the hardest crisis to predict: our models explained about 15% of recovery after 2008, compared with about 35% after COVID and 31% in a normal, non-crisis period</li>
+<li>A model trained on one crisis kept only a little over half its ability to rank counties when tested on the other</li>
+</ul>
+<p style="margin:0;font-size:16px;line-height:1.6">Takeaway: a county isn&#39;t simply resilient or not. It&#39;s resilient to a specific kind of shock, so recovery plans built for one crisis may not work for the next.</p>
+<p style="margin:0;font-size:15px;color:#4a5f70">Team: Fiona Wu, Andrew Sergeyev, Hejia Jing, Lucy Zhou and Sasha Kourakin. Our team placed in the top five for final presentations.</p>
+<p style="margin:0;font-size:15px;color:#4a5f70">My role: [WHAT YOU PERSONALLY BUILT OR ANALYZED]</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="border-radius:12px;background:#f3f5f7;padding:20px;display:flex;flex-direction:column;gap:12px">
+<p style="margin:0;font-size:14px;font-weight:600;color:#22384a">Construction share as a predictor of recovery</p>
+<div style="display:flex;flex-direction:column;gap:4px">
+<span style="font-size:13px;color:#4a5f70">2008 crisis: significant negative effect</span>
+<div style="height:14px;width:85%;border-radius:4px;background:#c2410c"></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px">
+<span style="font-size:13px;color:#4a5f70">COVID-19: no measurable effect</span>
+<div style="height:14px;width:2%;min-width:4px;border-radius:4px;background:#8a9aa8"></div>
+</div>
+</div>
+<div><span class="tag">R</span><span class="tag">tidyverse</span><span class="tag">ggplot2</span><span class="tag">glmnet (LASSO)</span><span class="tag">randomForest</span><span class="tag">Git</span><span class="tag">Federal data (BLS, Census, IRS, BEA, USDA)</span></div>
+</div>
+</article>
+</section>
+
+<section id="volunteering" style="background:#0a2540;color:#ffffff;margin-top:40px">
+<div class="wrap" style="padding-top:64px;padding-bottom:64px;display:flex;flex-direction:column;gap:16px">
+<h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:36px;letter-spacing:-0.02em">Volunteering</h2>
+<h3 style="margin:0;font-size:22px;font-weight:600">Assistant coach, Longwood Hockey summer camp</h3>
+<p style="margin:0;font-size:14px;color:#cfe6ff">Summer 2026</p>
+<p style="margin:0;max-width:720px;font-size:17px;line-height:1.6;color:#dbe7f3">I volunteered as a coach assistant at the Longwood Hockey summer camp for the Florida Breakers and Florida Surf youth hockey teams, helping young players build their skills. Longwood Hockey recognized my volunteering with an award at the end of the summer.</p>
+</div>
+</section>
+
+<section id="skills" class="wrap" style="padding-top:64px;padding-bottom:64px">
+<h2 style="margin:0 0 24px;font-family:'Space Grotesk',sans-serif;font-size:36px;letter-spacing:-0.02em">Skills</h2>
+<div class="cols3">
+<div style="display:flex;flex-direction:column;gap:8px">
+<h3 style="margin:0;font-size:18px">Languages</h3>
+<p style="margin:0;font-size:16px;line-height:1.6;color:#22384a">Python, R, SQL, JavaScript, HTML and CSS, Java</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<h3 style="margin:0;font-size:18px">Data and modeling</h3>
+<p style="margin:0;font-size:16px;line-height:1.6;color:#22384a">pandas, Plotly, Streamlit, linear regression, LASSO, random forests, data cleaning</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<h3 style="margin:0;font-size:18px">Building and running apps</h3>
+<p style="margin:0;font-size:16px;line-height:1.6;color:#22384a">Flask, FastAPI, PostgreSQL, SQLite, AWS, Railway, Git, automated testing, secure sign-in</p>
+</div>
+</div>
+</section>
+
+<section id="contact" style="background:#eef3f8">
+<div class="wrap" style="padding-top:56px;padding-bottom:56px;display:flex;flex-direction:column;gap:14px">
+<h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:36px;letter-spacing:-0.02em">Get in touch</h2>
+<p style="margin:0;font-size:17px;color:#22384a">I&#39;m looking for a summer 2027 research or software role, especially in machine learning or healthcare.</p>
+<div style="display:flex;flex-wrap:wrap;gap:24px;font-size:17px">
+<span>Email: [YOUR EMAIL]</span>
+<a href="https://github.com/flcode17">github.com/flcode17</a>
+<a href="https://www.linkedin.com/in/andrew-sg5312/">linkedin.com/in/andrew-sg5312</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="wrap" style="padding-top:24px;padding-bottom:24px;font-size:14px;color:#4a5f70">Andrew Sergeyev, Palm Beach Gardens, Florida</footer>
+</div>
+</body>
+</html>
